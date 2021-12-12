@@ -1,0 +1,6 @@
+After calling the API every minute for an hour and exporting that data to a database, 
+I noticed that the factor variable seemed to be the cube of the current index it was on (besides 0). 
+To test this theory, I made an analysis.py file where I made an array of cubes based on the index and
+then compared it to the output of the factors column. It returned true for every single element. I think
+the reason for this pattern is that the API looks at the minute the API was called and decides the factor
+based on that (i.e. if the API was called at minute 2, the factor would be 8 or 2^3). 
