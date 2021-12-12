@@ -19,7 +19,7 @@ mydb = mysql.connector.connect(
 
 I ran into an error (ERROR 1045 (28000): Access denied for user 'ayushi'@'localhost' (using password: YES)) and [this] (https://stackoverflow.com/questions/10299148/mysql-error-1045-28000-access-denied-for-user-billlocalhost-using-passw) helped me understand that I have to create ayushi@localhost and grant priveleges to that account. On MySQL workbench, I pasted this code:
 
-CREATE USER ayushi@localhost IDENTIFIED BY 'Ayushi29';
+CREATE USER ayushi@localhost IDENTIFIED BY 'xxxxx';
 grant all privileges on *.* to ayushi@localhost with grant option;
 
 and was successfully able to connect to the database. From there, I was able to execute SQL queries to insert the API information to a precreated table in the database. 
