@@ -3,4 +3,7 @@ I noticed that the factor variable seemed to be the cube of the current index it
 To test this theory, I made an analysis.py file where I made an array of cubes based on the index and
 then compared it to the output of the factors column. It returned true for every single element. I think
 the reason for this pattern is that the API looks at the minute the API was called and decides the factor
-based on that (i.e. if the API was called at minute 2, the factor would be 8 or 2^3). 
+based on that (i.e. if the API was called at minute 2, the factor would be 8 or 2^3). I also noticed that 
+PI seemed to be getting closer and closer to its actual value as time went on, so I also tested this in analysis.py
+where I subtracted each pi value in the table from actual pi and saw that the difference got closer and closer to zero
+as time went on.
