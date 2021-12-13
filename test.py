@@ -31,7 +31,7 @@ def job():
       remote_json = response.json()
 
     # create a sql statement to insert the API data into the database 
-    sql = "INSERT INTO pi_data9 (FACTOR, PI, TIMESTAMP) VALUES (%s, %s, %s)"
+    sql = "INSERT INTO pi_data10 (FACTOR, PI, TIMESTAMP) VALUES (%s, %s, %s)"
     val = (remote_json["factor"], remote_json["pi"], remote_json["time"])
     # execute the sql statement by inserting the correct values into the table
     mycursor.execute(sql, val)
@@ -43,4 +43,4 @@ schedule.every(1).minutes.until(timedelta(minutes=61)).do(job)
 
 while True:
     schedule.run_pending()
-    time.sleep(1)
+    # time.sleep(1)
